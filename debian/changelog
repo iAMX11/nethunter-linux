@@ -1,5 +1,6 @@
-nethunter (1.9.1) UNRELEASED; urgency=medium
+nethunter (1.9.2) UNRELEASED; urgency=medium
 
   * Initial release.
+  * update deauther scan command
 
- -- Shubham Vishwakarma <shubhamvis98@fossfrog.in>  Wed, 12 Feb 2025 10:34:21 +0000
+ -- Shubham Vishwakarma <shubhamvis98@fossfrog.in>  Thu, 02 Oct 2025 12:04:45 +0530

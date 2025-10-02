@@ -122,7 +122,7 @@ class Functions:
 
 class AppDetails:
     name = 'NetHunter'
-    version = '1.9.1'
+    version = '1.9.2'
     desc = "A Clone of Android's NetHunter for GNU/Linux Phones"
     dev = 'Shubham Vishwakarma'
     appid = 'in.fossfrog.nethunter'
@@ -505,7 +505,7 @@ class Deauther(Functions):
         display = self.display_buffer
         ifname = self.iface.get_active_text()
         if ifname:
-            out = self.get_output(f"iwlist {ifname} scanning | grep -E 'ESSID|Frequency' | tac", shell=True)
+            out = self.get_output(f"iw dev {ifname} scan | sed 's|DS Parameter set: channel|CHANNEL:|g' | grep -E 'SSID|CHANNEL'", shell=True)
             display.set_text(out[0].replace(' ', '').replace('Frequency', 'Freq').replace('Channel', 'Ch '))
         else:
             display.set_text('[!]Select Interface First')
